@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app_salao1/models/agendamento.dart';
 
+import '../screens/agendamento_screen.dart';
+
 class AgendamentosRepository {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
@@ -8,7 +10,8 @@ class AgendamentosRepository {
     QuerySnapshot snapshot = await _firestore.collection('agendamentos').get();
     List<Agendamento> agendamentos = [];
     snapshot.docs.forEach((doc) {
-      Agendamento agendamento = Agendamento.fromMap(doc.data());
+      Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+      Agendamento agendamento = Agendamento.fromMap(data, doc.id);
       agendamentos.add(agendamento);
     });
     return agendamentos;
@@ -35,5 +38,3 @@ class AgendamentosRepository {
     }
   }
 }
-
-class QuerySnapshot {}

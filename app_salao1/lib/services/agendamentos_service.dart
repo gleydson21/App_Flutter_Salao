@@ -5,6 +5,12 @@ class AgendamentosService {
   final CollectionReference _agendamentosCollection =
       FirebaseFirestore.instance.collection('agendamentos');
 
+  get nomeCliente => null;
+
+  get data => null;
+
+  get horario => null;
+
   Stream<List<Agendamento>> getAgendamentos() {
     return _agendamentosCollection
         .snapshots()
