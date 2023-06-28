@@ -1,0 +1,82 @@
+//Modelo de arquitetura --- Manual do APP
+
+
+
+salon_app/
+├── lib/
+│   ├── main.dart
+│   ├── models/
+│   │   ├── agendamento.dart
+│   │   ├── cliente.dart
+│   │   ├── funcionario.dart
+│   │   ├── servico.dart
+│   │   └── ...
+│   ├── repositories/
+│   │   ├── autenticacao_repository.dart
+│   │   ├── agendamentos_repository.dart
+│   │   ├── clientes_repository.dart
+│   │   ├── funcionarios_repository.dart
+│   │   ├── servicos_repository.dart
+│   │   └── ...
+│   ├── services/
+│   │   ├── autenticacao_service.dart
+│   │   ├── agendamentos_service.dart
+│   │   ├── clientes_service.dart
+│   │   ├── funcionarios_service.dart
+│   │   ├── servicos_service.dart
+│   │   └── ...
+│   ├── screens/
+│   │   ├── home_screen.dart
+│   │   ├── agendamentos_screen.dart
+│   │   ├── clientes_screen.dart
+│   │   ├── funcionarios_screen.dart
+│   │   ├── servicos_screen.dart
+│   │   ├── agendamento_detalhes_screen.dart
+│   │   ├── cliente_detalhes_screen.dart
+│   │   ├── funcionario_detalhes_screen.dart
+│   │   ├── servico_detalhes_screen.dart
+│   │   ├── login_screen.dart
+│   │   └── signup_screen.dart
+│   ├── widgets/
+│   │   ├── agendamento_card.dart
+│   │   ├── cliente_card.dart
+│   │   ├── funcionario_card.dart
+│   │   ├── servico_card.dart
+│   │   ├── custom_button.dart
+│   │   └── ...
+│   └── ...
+├── assets/
+│   ├── images/
+│   │   ├── corte_cabelo.png
+│   │   ├── lava_cabelo.png
+│   │   ├── manicure.png
+│   │   ├── pedicure.png
+│   │   └── ...
+│   └── fonts/
+│       ├── Roboto-Regular.ttf
+│       ├── Roboto-Bold.ttf
+│       └── ...
+├── test/
+│   ├── widget_test.dart
+│   ├── model_test.dart
+│   └── service_test.dart
+├── android/
+│   └── ...
+└── ios/
+    └── ...
+
+
+
+    ****************************************************************************
+    TODO // Procurar Imagens e Fontes.
+    ├── assets/
+│   ├── images/
+│   │   ├── corte_cabelo.png
+│   │   ├── lava_cabelo.png
+│   │   ├── manicure.png
+│   │   ├── pedicure.png
+│   │   └── ...
+│   └── fonts/
+│       ├── Roboto-Regular.ttf
+│       ├── Roboto-Bold.ttf
+│       └── ...
