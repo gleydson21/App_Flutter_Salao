@@ -9,7 +9,8 @@ class AgendamentosService {
     return _agendamentosCollection
         .snapshots()
         .map((snapshot) => snapshot.docs
-            .map((doc) => Agendamento.fromMap(doc.data(), doc.id))
+            .map((doc) =>
+                Agendamento.fromMap(doc.data() as Map<String, dynamic>, doc.id))
             .toList())
         .asBroadcastStream();
   }

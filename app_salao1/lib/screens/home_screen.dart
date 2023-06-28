@@ -1,13 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:app_salao1/screens/agendamentos_screen.dart';
-import 'package:app_salao1/screens/clientes_screen.dart';
-import 'package:app_salao1/screens/funcionarios_screen.dart';
-import 'package:app_salao1/screens/servicos_screen.dart';
-
-class HomeScreen extends StatefulWidget {
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
@@ -28,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('App Salão 1'),
+        title: Text('App Salão'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -40,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Agendamentos',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.people),
+            icon: Icon(Icons.person),
             label: 'Clientes',
           ),
           BottomNavigationBarItem(
@@ -48,12 +40,12 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Funcionários',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
+            icon: Icon(Icons.build),
             label: 'Serviços',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.pink,
+        selectedItemColor: Colors.blue,
         onTap: _onItemTapped,
       ),
     );
