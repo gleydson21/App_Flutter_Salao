@@ -11,7 +11,7 @@ class Funcionario {
     required this.email,
   });
 
-  factory Funcionario.fromMap(Map<String, dynamic> map) {
+  factory Funcionario.fromMap(Map<String, dynamic> map, String id) {
     return Funcionario(
       id: map['id'],
       nome: map['nome'],
@@ -19,6 +19,8 @@ class Funcionario {
       email: map['email'],
     );
   }
+
+  String? get especialidade => null;
 
   Map<String, dynamic> toMap() {
     return {

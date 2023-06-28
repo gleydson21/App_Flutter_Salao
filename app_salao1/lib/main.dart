@@ -1,29 +1,53 @@
 import 'package:flutter/material.dart';
-import 'package:app_salao1/screens/home_screen.dart';
-import 'package:app_salao1/screens/agendamento_screen.dart';
+import 'package:app_salao1/models/agendamento.dart';
 
-void main() {
-  final routes = <String, WidgetBuilder>{
-    '/': (BuildContext context) => HomeScreen(),
-    '/agendamento': (BuildContext context) => AgendamentoScreen(),
-  };
+import 'screens/agendamento_screen.dart';
 
-  runApp(MyApp(routes));
-}
+class AgendamentoScreen extends StatefulWidget {
+  final Agendamento agendamento;
 
-class MyApp extends StatelessWidget {
-  final Map<String, WidgetBuilder> routes;
-
-  MyApp(this.routes);
+  const AgendamentoScreen({Key? key, required this.agendamento})
+      : super(key: key);
 
   @override
+  _AgendamentoScreenState createState() => _AgendamentoScreenState();
+}
+
+class _AgendamentoScreenState extends State<AgendamentoScreen> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'App Salão',
-      theme: ThemeData(
-        primarySwatch: Color.fromARGB(255, 224, 150, 222),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Agendamento'),
       ),
-      routes: routes,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Nome do cliente: ${widget.agendamento.nomeCliente}',
+            ),
+            Text(
+              'Data: ${widget.agendamento.data}',
+            ),
+            Text(
+              'Hora: ${widget.agendamento.hora}',
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Lógica para confirmar o agendamento
+              },
+              child: Text('Confirmar'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Lógica para cancelar o agendamento
+              },
+              child: Text('Cancelar'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

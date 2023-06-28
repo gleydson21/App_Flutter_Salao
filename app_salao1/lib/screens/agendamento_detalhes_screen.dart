@@ -1,11 +1,9 @@
+import 'package:app_salao1/models/agendamento.dart';
 import 'package:app_salao1/screens/agendamento_screen.dart';
 import 'package:flutter/material.dart';
 
-
-
-
 class AgendamentoDetalhesScreen extends StatelessWidget {
-  final AgendamentoScreen agendamento;
+  final Agendamento agendamento;
 
   AgendamentoDetalhesScreen({required this.agendamento});
 
@@ -26,22 +24,12 @@ class AgendamentoDetalhesScreen extends StatelessWidget {
             ),
             SizedBox(height: 8.0),
             Text(
-              'Serviço: ${agendamento.servico}',
-              style: TextStyle(fontSize: 16.0),
-            ),
-            SizedBox(height: 8.0),
-            Text(
               'Data: ${agendamento.data}',
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(height: 8.0),
             Text(
               'Horário: ${agendamento.horario}',
-              style: TextStyle(fontSize: 16.0),
-            ),
-            SizedBox(height: 8.0),
-            Text(
-              'Funcionário: ${agendamento.funcionario}',
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(height: 16.0),

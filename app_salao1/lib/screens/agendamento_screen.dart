@@ -1,37 +1,46 @@
 import 'package:flutter/material.dart';
 
+class Agendamento {
+  String? nome;
+  String? data;
+  String? horario;
+  String? id;
+
+  Agendamento({this.nome, this.data, this.horario, this.id});
+
+  get nomeCliente => null;
+
+  get hora => null;
+
+  String? get servico => null;
+
+  String? get dataHora => null;
+
+  static Agendamento fromMap(Map<String, dynamic> data, String id) {
+    return Agendamento(
+      nome: data['nome'],
+      data: data['data'],
+      horario: data['horario'],
+      id: id,
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'nome': nome,
+      'data': data,
+      'horario': horario,
+    };
+  }
+}
 
 class AgendamentoScreen extends StatefulWidget {
   final Agendamento agendamento;
 
   AgendamentoScreen({required this.agendamento});
 
-  get nome => null;
-
-  get servico => null;
-
-  get data => null;
-
-  get horario => null;
-
-  get funcionario => null;
-
   @override
   _AgendamentoScreenState createState() => _AgendamentoScreenState();
-}
-
-class Agendamento {
-  String? get nome => null;
-  
-  String? get data => null;
-  
-  String? get horario => null;
-
-  String? get id => null;
-
-  static Agendamento fromMap(Map<String, dynamic> data, String id) {}
-
-  Map<String, dynamic> toMap() {}
 }
 
 class _AgendamentoScreenState extends State<AgendamentoScreen> {

@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app_salao1/models/agendamento.dart';
 
+import '../screens/agendamento_screen.dart';
+
 class AgendamentosService {
   final CollectionReference _agendamentosCollection =
       FirebaseFirestore.instance.collection('agendamentos');
