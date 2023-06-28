@@ -1,13 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
+
   static List<Widget> _widgetOptions = <Widget>[
-    AgendamentosScreen(),
-    ClientesScreen(),
-    FuncionariosScreen(),
-    ServicosScreen(),
+    Text('Tela de Agendamentos'),
+    Text('Tela de Clientes'),
+    Text('Tela de Funcionários'),
+    Text('Tela de Serviços'),
   ];
 
   void _onItemTapped(int index) {
@@ -20,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('App Salão'),
+        title: Text('Meu Salão'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -32,15 +37,15 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Agendamentos',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.people),
             label: 'Clientes',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.work),
+            icon: Icon(Icons.person),
             label: 'Funcionários',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.build),
+            icon: Icon(Icons.settings),
             label: 'Serviços',
           ),
         ],

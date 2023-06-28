@@ -5,14 +5,14 @@ class ClientesService {
   final CollectionReference _clientesCollection =
       FirebaseFirestore.instance.collection('clientes');
 
-  Stream<List<Cliente>> getClientes() {
-    return _clientesCollection
-        .snapshots()
-        .map((snapshot) => snapshot.docs
-            .map((doc) => Cliente.fromMap(doc.data(), doc.id))
-            .toList())
-        .asBroadcastStream();
-  }
+ Stream<List<Cliente>> getClientes() {
+  return _clientesCollection
+    .snapshots()
+    .map((snapshot) => snapshot.docs
+        .map((doc) => Cliente.fromMap(doc.data() as Map<String, dynamic>, doc.id))
+        .toList())
+    .asBroadcastStream();
+}
 
   Future<void> addCliente(Cliente cliente) {
     return _clientesCollection.add(cliente.toMap());

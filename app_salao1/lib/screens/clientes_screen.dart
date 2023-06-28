@@ -1,7 +1,15 @@
-class Cliente {
-  final String nome;
-  final String telefone;
-  final String email;
+import 'package:flutter/material.dart';
 
-  Cliente({required this.nome, required this.telefone, required this.email});
+class ClientesScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Clientes'),
+      ),
+      body: Center(
+        child: Text('Tela de Clientes'),
+      ),
+    );
+  }
 }

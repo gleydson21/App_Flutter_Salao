@@ -1,7 +1,15 @@
-class Servico {
-  final String nome;
-  final double preco;
-  final String descricao;
+import 'package:flutter/material.dart';
 
-  Servico({required this.nome, required this.preco, required this.descricao});
+class ServicosScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Serviços'),
+      ),
+      body: Center(
+        child: Text('Tela de Serviços'),
+      ),
+    );
+  }
 }

@@ -11,7 +11,7 @@ class Cliente {
     required this.email,
   });
 
-  factory Cliente.fromMap(Map<String, dynamic> map) {
+  factory Cliente.fromMap(Map<String, dynamic> map, String id) {
     return Cliente(
       id: map['id'],
       nome: map['nome'],

@@ -1,7 +1,15 @@
-class Funcionario {
-  final String nome;
-  final String cargo;
-  final double salario;
+import 'package:flutter/material.dart';
 
-  Funcionario({required this.nome, required this.cargo, required this.salario});
+class FuncionariosScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Funcionários'),
+      ),
+      body: Center(
+        child: Text('Tela de Funcionários'),
+      ),
+    );
+  }
 }
