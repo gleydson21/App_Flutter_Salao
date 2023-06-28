@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
-  static List<Widget> _widgetOptions = <Widget>[
-    Text('Tela de Agendamentos'),
-    Text('Tela de Clientes'),
-    Text('Tela de Funcionários'),
-    Text('Tela de Serviços'),
+  static final List<Widget> _widgetOptions = <Widget>[
+    const Text('Tela de Agendamentos'),
+    const Text('Tela de Clientes'),
+    const Text('Tela de Funcionários'),
+    const Text('Tela de Serviços'),
   ];
 
   void _onItemTapped(int index) {
@@ -25,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Meu Salão'),
+        title: const Text('Meu Salão'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),

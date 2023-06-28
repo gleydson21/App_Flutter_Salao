@@ -37,16 +37,17 @@ class Agendamento {
 class AgendamentoScreen extends StatefulWidget {
   final Agendamento agendamento;
 
-  AgendamentoScreen({required this.agendamento});
+  const AgendamentoScreen({super.key, required this.agendamento});
 
   @override
+  // ignore: library_private_types_in_public_api
   _AgendamentoScreenState createState() => _AgendamentoScreenState();
 }
 
 class _AgendamentoScreenState extends State<AgendamentoScreen> {
-  TextEditingController _nomeController = TextEditingController();
-  TextEditingController _dataController = TextEditingController();
-  TextEditingController _horarioController = TextEditingController();
+  final TextEditingController _nomeController = TextEditingController();
+  final TextEditingController _dataController = TextEditingController();
+  final TextEditingController _horarioController = TextEditingController();
 
   @override
   void initState() {
@@ -60,28 +61,28 @@ class _AgendamentoScreenState extends State<AgendamentoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Agendamento'),
+        title: const Text('Agendamento'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Nome do cliente:'),
+            const Text('Nome do cliente:'),
             TextField(
               controller: _nomeController,
             ),
-            SizedBox(height: 16.0),
-            Text('Data:'),
+            const SizedBox(height: 16.0),
+            const Text('Data:'),
             TextField(
               controller: _dataController,
             ),
-            SizedBox(height: 16.0),
-            Text('Horário:'),
+            const SizedBox(height: 16.0),
+            const Text('Horário:'),
             TextField(
               controller: _horarioController,
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -89,14 +90,14 @@ class _AgendamentoScreenState extends State<AgendamentoScreen> {
                   onPressed: () {
                     // Implementar ação de salvar
                   },
-                  child: Text('Salvar'),
+                  child: const Text('Salvar'),
                 ),
-                SizedBox(width: 16.0),
+                const SizedBox(width: 16.0),
                 ElevatedButton(
                   onPressed: () {
                     // Implementar ação de excluir
                   },
-                  child: Text('Excluir'),
+                  child: const Text('Excluir'),
                 ),
               ],
             ),

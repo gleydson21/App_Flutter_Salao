@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:app_salao1/models/agendamento.dart';
 import 'package:app_salao1/repositories/agendamentos_repository.dart';
 import 'package:app_salao1/screens/agendamento_detalhes_screen.dart';
 
 import '../screens/agendamento_screen.dart';
 
 class AgendamentoScreen extends StatefulWidget {
+  const AgendamentoScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _AgendamentoScreenState createState() => _AgendamentoScreenState();
 }
 
@@ -36,20 +38,20 @@ class _AgendamentoScreenState extends State<AgendamentoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Agendamentos'),
+        title: const Text('Agendamentos'),
       ),
       body: FutureBuilder(
         future: _agendamentos,
         builder: (context, snapshot) {
           // Exibe um indicador de progresso enquanto os dados estão sendo carregados
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
           // Exibe uma mensagem de erro se ocorrer um erro ao carregar os dados
           else if (snapshot.hasError) {
-            return Center(
+            return const Center(
               child: Text('Erro ao carregar os agendamentos'),
             );
           }
@@ -65,7 +67,7 @@ class _AgendamentoScreenState extends State<AgendamentoScreen> {
                   subtitle:
                       Text('${agendamento.data} - ${agendamento.horario}'),
                   trailing: IconButton(
-                    icon: Icon(Icons.arrow_forward),
+                    icon: const Icon(Icons.arrow_forward),
                     onPressed: () => _verDetalhes(agendamento),
                   ),
                 );

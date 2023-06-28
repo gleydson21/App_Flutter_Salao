@@ -11,11 +11,12 @@ class FuncionarioCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: Icon(Icons.person),
+        leading: const Icon(Icons.person),
         title: Text(funcionario.nome),
-        subtitle: Text(funcionario.especialidade),
+        subtitle:
+            Text(funcionario.especialidade ?? 'Especialidade não definida'),
         trailing: IconButton(
-          icon: Icon(Icons.edit),
+          icon: const Icon(Icons.edit),
           onPressed: () {
             // Lógica para editar o funcionário
           },

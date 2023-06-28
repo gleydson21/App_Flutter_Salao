@@ -10,11 +10,11 @@ class ClienteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: Icon(Icons.person),
+        leading: const Icon(Icons.person),
         title: Text(cliente.nome),
         subtitle: Text(cliente.telefone),
         trailing: IconButton(
-          icon: Icon(Icons.edit),
+          icon: const Icon(Icons.edit),
           onPressed: () {
             // Lógica para editar o cliente
           },

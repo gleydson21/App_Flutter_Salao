@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:app_salao1/models/agendamento.dart';
 
 import 'screens/agendamento_screen.dart';
 
@@ -10,6 +9,7 @@ class AgendamentoScreen extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _AgendamentoScreenState createState() => _AgendamentoScreenState();
 }
 
@@ -18,7 +18,7 @@ class _AgendamentoScreenState extends State<AgendamentoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Agendamento'),
+        title: const Text('Agendamento'),
       ),
       body: Center(
         child: Column(
@@ -37,13 +37,13 @@ class _AgendamentoScreenState extends State<AgendamentoScreen> {
               onPressed: () {
                 // Lógica para confirmar o agendamento
               },
-              child: Text('Confirmar'),
+              child: const Text('Confirmar'),
             ),
             ElevatedButton(
               onPressed: () {
                 // Lógica para cancelar o agendamento
               },
-              child: Text('Cancelar'),
+              child: const Text('Cancelar'),
             ),
           ],
         ),

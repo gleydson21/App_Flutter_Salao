@@ -4,13 +4,13 @@ import 'package:app_salao1/models/servico.dart';
 class ServicoDetalhesScreen extends StatelessWidget {
   final Servico servico;
 
-  ServicoDetalhesScreen({required this.servico});
+  const ServicoDetalhesScreen({super.key, required this.servico});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detalhes do Serviço'),
+        title: const Text('Detalhes do Serviço'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -19,15 +19,15 @@ class ServicoDetalhesScreen extends StatelessWidget {
           children: [
             Text(
               servico.nome,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Text(
               'Preço: R\$${servico.preco}',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16.0,
               ),
             ),

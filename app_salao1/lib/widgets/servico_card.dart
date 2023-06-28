@@ -10,11 +10,11 @@ class ServicoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: Icon(Icons.work),
+        leading: const Icon(Icons.work),
         title: Text(servico.nome),
         subtitle: Text('R\$ ${servico.preco}'),
         trailing: IconButton(
-          icon: Icon(Icons.edit),
+          icon: const Icon(Icons.edit),
           onPressed: () {
             // Lógica para editar o serviço
           },

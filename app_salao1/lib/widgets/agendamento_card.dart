@@ -1,4 +1,3 @@
-import 'package:app_salao1/models/agendamento.dart';
 import 'package:app_salao1/screens/agendamento_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,11 +12,13 @@ class AgendamentoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: Icon(Icons.calendar_today),
-        title: Text(agendamento.servico),
+        leading: const Icon(Icons.calendar_today),
+        title: Text(
+          agendamento.nome?? 'Nome não definido',
+        ),
         subtitle: Text(agendamento.dataHora ?? 'Data e hora não definidas'),
         trailing: IconButton(
-          icon: Icon(Icons.delete),
+          icon: const Icon(Icons.delete),
           onPressed: onDelete,
         ),
       ),

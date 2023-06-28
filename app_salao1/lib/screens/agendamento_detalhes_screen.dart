@@ -1,17 +1,16 @@
-import 'package:app_salao1/models/agendamento.dart';
 import 'package:app_salao1/screens/agendamento_screen.dart';
 import 'package:flutter/material.dart';
 
 class AgendamentoDetalhesScreen extends StatelessWidget {
   final Agendamento agendamento;
 
-  AgendamentoDetalhesScreen({required this.agendamento});
+  const AgendamentoDetalhesScreen({super.key, required this.agendamento});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detalhes do agendamento'),
+        title: const Text('Detalhes do agendamento'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -20,19 +19,20 @@ class AgendamentoDetalhesScreen extends StatelessWidget {
           children: [
             Text(
               'Nome do cliente: ${agendamento.nome}',
-              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+              style:
+                  const TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8.0),
+            const SizedBox(height: 8.0),
             Text(
               'Data: ${agendamento.data}',
-              style: TextStyle(fontSize: 16.0),
+              style: const TextStyle(fontSize: 16.0),
             ),
-            SizedBox(height: 8.0),
+            const SizedBox(height: 8.0),
             Text(
               'Horário: ${agendamento.horario}',
-              style: TextStyle(fontSize: 16.0),
+              style: const TextStyle(fontSize: 16.0),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -40,14 +40,14 @@ class AgendamentoDetalhesScreen extends StatelessWidget {
                   onPressed: () {
                     // Implementar ação de editar
                   },
-                  child: Text('Editar'),
+                  child: const Text('Editar'),
                 ),
-                SizedBox(width: 16.0),
+                const SizedBox(width: 16.0),
                 ElevatedButton(
                   onPressed: () {
                     // Implementar ação de excluir
                   },
-                  child: Text('Excluir'),
+                  child: const Text('Excluir'),
                 ),
               ],
             ),

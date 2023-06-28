@@ -7,7 +7,7 @@ class FuncionariosService {
 
   Stream<List<Funcionario>> getFuncionarios() {
     // Cria um Stream que não emite nenhum evento
-    return Stream.empty();
+    return const Stream.empty();
   }
 
   Future<void> addFuncionario(Funcionario funcionario) async {
